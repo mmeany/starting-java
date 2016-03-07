@@ -32,7 +32,7 @@ import java.util.Date;
  * 
  * CONVENTION: Class names should start with a Capital letter, be the same as the name of the file containing them and follow CamelCase style.
  */
-public class Outline {
+public class Step01Overview {
 
 	// Object scoped properties and methods are defined inside of the class definition.
 	// No code exists at this level, all code must be contained inside of a method in a Java application
@@ -57,13 +57,13 @@ public class Outline {
 	 * 
 	 * CONVENTION: Constructor name should be same as class name. If none specified a default is assumed that does nothing.
 	 */
-	public Outline() {
+	public Step01Overview() {
 	}
 
 	/*
 	 * This is an example of a constructor that accepts parameters that it uses to initialise an object during instantiation.
 	 */
-	public Outline(String name, String dateOfBirth) throws ParseException {
+	public Step01Overview(String name, String dateOfBirth) throws ParseException {
 		// The this keyword refers to the instance being created, the dot is a notation for accessing properties and methods of an object
 		// The following line sets the instance property name to the value of the name passed as a parameter to the constructor
 		this.name = name;
@@ -126,11 +126,12 @@ public class Outline {
 		// try / catch blocks surround areas of code that can generate exception
 		// any exception thrown inside the try block should be dealt with inside a corresponding catch block
 		try {
+			
 			// We create three instances of the Outine class and store the references in variables called one, two and three
 			// In each case a new object instance is created and initialisation parameters are supplied
-			Outline one = new Outline("Paul", "22/05/1965");
-			Outline two = new Outline("Claire", "08/09/1967");
-			Outline three = new Outline("Petra", "28/03/1971");
+			Step01Overview one = new Step01Overview("Paul", "22/05/1965");
+			Step01Overview two = new Step01Overview("Claire", "08/09/1967");
+			Step01Overview three = new Step01Overview("Petra", "28/03/1971");
 			
 			/*
 			 * Notice that we have one Class of type Outline - the template for Outline objects
@@ -145,7 +146,7 @@ public class Outline {
 			System.out.println(one.getName());
 			
 			// When an exception happens code execution stops and exit jumps directly to the catch block
-			Outline bad = new Outline("BAD", "This is not a date and will cause a parse exception");
+			Step01Overview bad = new Step01Overview("BAD", "This is not a date and will cause a parse exception");
 			System.out.println("This line will not be printed");
 			
 			// The catch block(s) follows, there will be one for each exception trapped
